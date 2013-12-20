@@ -1,0 +1,45 @@
+[core]
+  excludesfile = ~/.gitignore
+
+[color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+  ui = auto
+  pager = true
+  showbranch = auto
+
+[user]
+  name = mzavyrylin
+  email = vandalsafe@gmail.com
+
+[merge]
+  summary = true
+  tool = meld
+
+[alias]
+  b = branch -v
+  r = remote -v
+  t = tag -l
+  cp = cherry-pick
+  co = checkout
+  br = branch
+  st = status -sb
+  ci = commit
+  ds = diff --staged
+  amend = commit --amend -C HEAD
+  undo = reset --soft HEAD^
+  unstage = reset HEAD -- 
+  uncommit = reset --soft HEAD^
+  last = log -1 HEAD
+  up = pull --rebase
+  put = push origin HEAD
+  ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ %cn" --decorate
+  ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ %cn" --decorate --numstat
+  gr = log --graph --pretty=format':%C(red)%h%Cblue%d%Creset %s %C(yellow) %an, %ar%Creset'
+  where = branch -av --contains
+  mine = log --pretty=format':%C(red)%h%Creset %C(yellow)%an %Cgreen%ai%Creset %s %Cblue%d%Creset' --author='m.zavyrylin@fun-box.ru' --date=local
+
+[push]
+  default = simple
