@@ -10,10 +10,6 @@
   pager = true
   showbranch = auto
 
-[user]
-  name = mzavyrylin
-  email = vandalsafe@gmail.com
-
 [merge]
   summary = true
   tool = meld
