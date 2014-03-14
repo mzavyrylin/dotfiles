@@ -1,2 +1,6 @@
 alias bex="bundle exec"
 alias brake="bundle exec rake"
+alias h="history"
+alias ll="ls -l --color"
+alias la="ls -laF --color"
+alias gg="grep"
