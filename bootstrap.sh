@@ -58,7 +58,7 @@ echo "Updating vim plugins..."
 cd $dir
 
 echo "~/.dotfiles"
-ln -s -f "$dir/" ~/.dotfiles
+[[ "`pwd`" != "$HOME/.dotfiles" ]] && ln -s -f "$dir/" ~/.dotfiles
 
 cd $dir
 
