@@ -3,4 +3,4 @@
 	url = git://github.com/zsh-users/zsh-completions.git
 [submodule "vimrc"]
 	path = vimrc
-	url = https://github.com/mzavyrylin/vimrc.git
+	url = https://github.com/zavyrylin/vimrc.git
