@@ -1,6 +1,7 @@
 alias b="bundle exec"
 alias rr="bundle exec rake"
 alias br="bundle exec rails"
+alias bo="bundle open"
 alias h="history"
 
 if [[ "`uname`" == "Darwin" ]]; then
