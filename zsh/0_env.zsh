@@ -7,7 +7,7 @@ export PATH="$HOME/.rbenv/bin:/usr/local/bin:$PATH:$HOME/bin"
 export TERM=xterm-256color
 export EDITOR=vim
 
-if [ `uname` == "Darwin" ]; then
+if [ `uname` = "Darwin" ]; then
   export JAVA_HOME=$(/usr/libexec/java_home)
 fi
 
