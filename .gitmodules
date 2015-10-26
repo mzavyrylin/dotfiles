@@ -1,6 +1,0 @@
-[submodule "zsh-completions"]
-	path = zsh-completions
-	url = git://github.com/zsh-users/zsh-completions.git
-[submodule "vimrc"]
-	path = vimrc
-	url = https://github.com/zavyrylin/vimrc.git
