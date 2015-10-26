@@ -28,11 +28,6 @@ cp -f .gitignore ~/.gitignore
 
 echo "Updating submodules"
 
-git submodule init
-git submodule update
-git submodule foreach git checkout master
-git submodule foreach git pull
-
 echo "Removing existing vim dotfiles"
 
 if [ ! -e ~/.vim.backup ]; then
@@ -48,11 +43,11 @@ rm -Rf ~/.vim
 rm -f ~/.vimrc
 
 echo "~/.vimrc"
-ln -s -f "$dir/vimrc/vimrc" ~/.vimrc
+ln -s -f "$dir/.vimrc" ~/.vimrc
 echo "~/.vim"
-ln -s -f "$dir/vimrc" ~/.vim
+ln -s -f "$dir/vim" ~/.vim
 
-cd vimrc/bundle
+cd vim/bundle
 echo "Updating vim plugins..."
 ./get.sh
 cd $dir
