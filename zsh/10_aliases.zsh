@@ -12,6 +12,7 @@ else
   alias la="ls -laF --color"
 fi
 
+function sst() { ssh -t $1 "tmux new -A -s $1" }
 function fxp() { git commit --fixup=$1 }
 function sq()  { git commit --squash=$1 }
 function rbz() { git rebase -i $1 --autosquash }
@@ -22,3 +23,35 @@ alias gap="git add -p"
 alias gc="git commit -m"
 alias gf="git fetch -p"
 alias zbs="git rebase --continue"
+
+function jar-manifest() { unzip -q -c $1 META-INF/MANIFEST.MF }
+function cert-info() { openssl x509 -text -in $1 }
+
+function ersh() {
+  if [ -d "./deps" ]; then
+    erl -pa ebin -pa deps/*/ebin +pc unicode $@
+  else
+    erl -pa ebin +pc unicode $@
+  fi
+}
+
+function to_s() {
+  for i in $@; do
+    echo -n "$i "
+  done
+}
+
+function ntf() {
+  local argv_str="`to_s $@`"
+  $@
+  local ec=$?
+  local title
+
+  if [ $ec -eq 0 ]; then
+    title='✅ Complete'
+  else
+    title='❌ Failed'
+  fi
+
+  osascript -e "display notification \"$argv_str\" with title \"$title\""
+}
