@@ -21,8 +21,4 @@ done
 autoload -U compinit
 compinit
 
-for file in ${(M)config_files:#*/completion.zsh}; do
-  source $file
-done
-
 unset config_files
