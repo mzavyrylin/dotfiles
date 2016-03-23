@@ -184,7 +184,8 @@ noremap ,jp :silent! %!jsonlint --pretty-print - 2>/dev/null<CR>
 " Lints
 noremap ,jl :!jsonlint --quiet %<CR>
 
-colorscheme zenburn
+let g:zenburn_disable_Label_underline = 1
+colorscheme solarized
 
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
