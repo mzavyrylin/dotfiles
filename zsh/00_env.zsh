@@ -11,10 +11,5 @@ if [ `uname` = "Darwin" ]; then
   export JAVA_HOME=$(/usr/libexec/java_home)
 fi
 
-#export DOCKER_HOST=tcp://localhost:2375
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=$HOME/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
-
 eval "$(rbenv init -)"
 eval "$(erlenv init -)"
