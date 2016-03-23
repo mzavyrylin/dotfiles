@@ -27,6 +27,15 @@ alias zbs="git rebase --continue"
 function jar-manifest() { unzip -q -c $1 META-INF/MANIFEST.MF }
 function cert-info() { openssl x509 -text -in $1 }
 
+function add-to-htpasswd() {
+  local user=$1
+  local pass=$(openssl rand -base64 9)
+  local hashed=$(openssl passwd -apr1 ${pass})
+
+  printf "${user}:${hashed}\n" >> .htpasswd
+  echo "User: ${user}, password: ${pass}"
+}
+
 function ersh() {
   if [ -d "./deps" ]; then
     erl -pa ebin -pa deps/*/ebin +pc unicode $@
