@@ -8,6 +8,9 @@ fi
 typeset -U config_files
 config_files=($ZSH/**/*.zsh)
 
+setopt prompt_subst
+PROMPT='%T%b %{[00;34m%}%~%{[00m%}`git-prompt`%(!.#.>) '
+
 # load paths
 for file in ${(M)config_files:#*/path.zsh}; do
   source $file

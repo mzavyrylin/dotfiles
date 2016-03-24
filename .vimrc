@@ -33,7 +33,7 @@ set nojoinspaces
 set title
 set tags+=.git/tags
 set nolist
-set cursorline
+"set cursorline
 set listchars=eol:¶,tab:\»\·
 
 set guioptions=acgi

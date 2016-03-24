@@ -1,9 +1,8 @@
+# -*- mode: sh -*-
+
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
 
-fpath=($ZSH/functions $fpath)
-
-autoload -U $ZSH/functions/*(:t)
 zstyle ':completion:*' completer _expand _complete
 
 autoload -Uz compinit
