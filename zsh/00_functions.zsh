@@ -48,7 +48,8 @@ function title() {
     esac
 }
 
-function sst() { ssh -t $1 "tmux new -A -s $1" }
+function ssa() { local session=`echo "$1" | tr '.-' '_'`; ssh -t $1 "tmux attach-session -t $session" }
+function sst() { local session=`echo "$1" | tr '.-' '_'`; ssh -t $1 "tmux new -A -s $session" }
 function fxp() { git commit --fixup=$1 }
 function sq()  { git commit --squash=$1 }
 function rbz() { git rebase -i $1 --autosquash }
@@ -59,7 +60,7 @@ function cert-info() { openssl x509 -text -in $1 }
 
 function add-to-htpasswd() {
   local user=$1
-  local pass=$(openssl rand -base64 9)
+  local pass=$(openssl rand -base64 9 | tr '/+=' 'sPe') # letters and digits only
   local hashed=$(openssl passwd -apr1 ${pass})
 
   printf "${user}:${hashed}\n" >> .htpasswd

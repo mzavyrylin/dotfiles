@@ -7,11 +7,9 @@ alias bo="bundle open"
 alias h="history"
 
 if [[ "`uname`" == "Darwin" ]]; then
-  alias ll="ls -l -G"
-  alias la="ls -laF -G"
+  alias ll="ls -lA -G"
 else
-  alias ll="ls -l --color"
-  alias la="ls -laF --color"
+  alias ll="ls -lA --color"
 fi
 
 alias gg="`which grep` --color=auto"
