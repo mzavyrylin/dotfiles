@@ -48,8 +48,7 @@ function title() {
     esac
 }
 
-function ssa() { local session=`echo "$1" | tr '.-' '_'`; ssh -t $1 "tmux attach-session -t $session" }
-function sst() { local session=`echo "$1" | tr '.-' '_'`; ssh -t $1 "tmux new -A -s $session" }
+function ssr() { local session=`echo "$1" | tr '.-' '_'`; ssh -t $1 "tmux attach-session -t $session || tmux new -A -s $session" }
 function fxp() { git commit --fixup=$1 }
 function sq()  { git commit --squash=$1 }
 function rbz() { git rebase -i $1 --autosquash }

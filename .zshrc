@@ -1,5 +1,5 @@
 export ZSH=$HOME/.dotfiles
-fpath=($HOME/.dotfiles/zsh-completions/src $fpath)
+fpath=(/usr/local/share/zsh-completions $fpath)
 
 if [[ -a ~/.localrc ]]; then
   source ~/.localrc
