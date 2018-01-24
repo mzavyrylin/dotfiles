@@ -19,3 +19,6 @@ GTAGS
 .rebar/
 ebin/
 target/
+build/
+.meghanada/
+.gradle/
