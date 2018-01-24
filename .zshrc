@@ -1,10 +1,6 @@
 export ZSH=$HOME/.dotfiles
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-if [[ -a ~/.localrc ]]; then
-  source ~/.localrc
-fi
-
 typeset -U config_files
 config_files=($ZSH/**/*.zsh)
 

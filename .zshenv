@@ -14,4 +14,8 @@ if [ `uname` = "Darwin" ]; then
   export JAVA_HOME=$(/usr/libexec/java_home)
 fi
 
+if [[ -a $HOME/.localrc ]]; then
+  source $HOME/.localrc
+fi
+
 eval "$(rbenv init -)"
