@@ -21,3 +21,5 @@ autoload -U compinit
 compinit
 
 unset config_files
+
+eval "$(rbenv init -)"

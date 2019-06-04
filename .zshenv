@@ -5,8 +5,8 @@ export LC_ALL="en_US.UTF-8"
 
 export RUBY_CFLAGS="-march=native -O2"
 export ARCHFLAGS="-arch x86_64"
-export PATH="$HOME/.rbenv/bin:/usr/local/bin:$PATH:$HOME/bin"
 export GOPATH="$HOME/.go"
+export PATH="/usr/local/bin:$GOPATH/bin:$PATH:$HOME/bin"
 export TERM=xterm-256color
 export EDITOR=vim
 
@@ -17,5 +17,3 @@ fi
 if [[ -a $HOME/.localrc ]]; then
   source $HOME/.localrc
 fi
-
-eval "$(rbenv init -)"
